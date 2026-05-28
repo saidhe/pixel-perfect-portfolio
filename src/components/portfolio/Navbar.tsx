@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { X } from "lucide-react";
 
 const links = [
   { id: "home", label: "Home" },
@@ -94,33 +95,71 @@ export function Navbar() {
         </button>
       </nav>
 
-      {open && (
-        <div className="md:hidden border-t border-border bg-background/95 backdrop-blur">
-          <ul className="px-5 py-4 space-y-1">
-            {links.map((l) => (
-              <li key={l.id}>
+      <AnimatePresence>
+        {open && (
+          <div className="md:hidden fixed inset-0 z-50">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              onClick={() => setOpen(false)}
+              className="absolute inset-0 bg-foreground/40 backdrop-blur-sm"
+            />
+            <motion.aside
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+              transition={{ type: "tween", ease: [0.32, 0.72, 0, 1], duration: 0.35 }}
+              className="relative h-full w-[78%] max-w-xs bg-background shadow-2xl flex flex-col"
+            >
+              <div className="flex items-center justify-between px-5 h-20">
+                <div className="flex items-center gap-2">
+                  <span className="h-10 w-10 rounded-xl grid place-items-center text-primary-foreground font-bold text-lg shadow-[var(--shadow-glow)]" style={{ background: "var(--gradient-primary)" }}>
+                    X
+                  </span>
+                  <span className="font-bold text-xl tracking-tight">
+                    Portfolio<span className="text-primary">.</span>
+                  </span>
+                </div>
+              </div>
+              <ul className="px-5 py-2 space-y-1 flex-1">
+                {links.map((l) => (
+                  <li key={l.id}>
+                    <button
+                      onClick={() => scrollTo(l.id)}
+                      className={`w-full text-left px-4 py-3 rounded-xl font-medium transition-colors ${
+                        active === l.id
+                          ? "bg-accent text-primary border border-primary/30"
+                          : "text-foreground hover:bg-accent/50"
+                      }`}
+                    >
+                      {l.label}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+              <div className="p-5">
                 <button
-                  onClick={() => scrollTo(l.id)}
-                  className={`w-full text-left px-4 py-3 rounded-lg font-medium ${
-                    active === l.id ? "bg-accent text-primary" : "text-foreground"
-                  }`}
+                  onClick={() => scrollTo("contact")}
+                  className="w-full inline-flex items-center justify-center gap-2 text-primary-foreground px-5 py-3.5 rounded-full font-semibold shadow-[var(--shadow-glow)]"
+                  style={{ background: "var(--gradient-primary)" }}
                 >
-                  {l.label}
+                  <span className="h-2 w-2 rounded-full bg-[oklch(0.75_0.18_150)] animate-pulse" />
+                  Hire Me
                 </button>
-              </li>
-            ))}
-            <li>
-              <button
-                onClick={() => scrollTo("contact")}
-                className="w-full text-primary-foreground px-4 py-3 rounded-lg font-semibold mt-2"
-                style={{ background: "var(--gradient-primary)" }}
-              >
-                Hire Me
-              </button>
-            </li>
-          </ul>
-        </div>
-      )}
+              </div>
+            </motion.aside>
+            <button
+              onClick={() => setOpen(false)}
+              aria-label="Close menu"
+              className="absolute top-5 right-5 h-10 w-10 rounded-lg bg-background/90 border border-border grid place-items-center text-foreground"
+            >
+              <X size={20} />
+            </button>
+          </div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
