@@ -16,7 +16,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="space-y-6"
+          className="space-y-6 order-2 lg:order-1"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card/60 backdrop-blur text-sm font-semibold text-primary">
             <span className="h-2 w-2 rounded-full bg-[oklch(0.70_0.18_150)] animate-pulse" />
@@ -93,7 +93,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative mx-auto w-full max-w-md aspect-square"
+          className="relative mx-auto w-full max-w-md aspect-square order-1 lg:order-2"
         >
           <div className="absolute inset-0 rounded-full" style={{ background: "var(--gradient-primary)", opacity: 0.15 }} />
           <div className="absolute inset-4 rounded-full border-2 border-dashed border-primary/30 animate-[spin_30s_linear_infinite]" />
