@@ -150,5 +150,30 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border-radius: 0.75rem;
+    background: oklch(0.985 0.005 250);
+    border: 1px solid var(--border);
+    font-size: 0.95rem;
+    color: var(--foreground);
+    transition: border-color .2s, box-shadow .2s;
+  }
+  .input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px oklch(0.55 0.24 262 / 0.12);
+  }
+  .input::placeholder { color: var(--muted-foreground); }
 }
