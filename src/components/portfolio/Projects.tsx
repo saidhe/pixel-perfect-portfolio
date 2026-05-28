@@ -10,6 +10,8 @@ type Project = {
   featured?: boolean;
   icon: typeof Wrench;
   grad: string;
+  liveUrl?: string;
+  codeUrl?: string;
 };
 
 const projects: Project[] = [
@@ -46,6 +48,9 @@ const projects: Project[] = [
 ];
 
 const categories = ["Tous", "Marketplace", "AI Platform", "Vote Platform", "Social App", "EdTech", "Community App", "Green Tech", "FinTech", "Portfolio"];
+
+// TODO: Remplace par ton lien GitHub principal (page "tous les projets")
+const GITHUB_PROFILE_URL = "#";
 
 export function Projects() {
   const [filter, setFilter] = useState("Tous");
@@ -125,10 +130,21 @@ export function Projects() {
                     ))}
                   </div>
                   <div className="flex gap-2 pt-2">
-                    <a href="#" className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-primary-foreground font-semibold text-sm shadow-[var(--shadow-glow)] hover:scale-[1.02] transition-transform" style={{ background: "var(--gradient-primary)" }}>
+                    <a
+                      href={p.liveUrl ?? "#"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-primary-foreground font-semibold text-sm shadow-[var(--shadow-glow)] hover:scale-[1.02] transition-transform"
+                      style={{ background: "var(--gradient-primary)" }}
+                    >
                       <ExternalLink size={15} /> Live
                     </a>
-                    <a href="#" className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-border font-semibold text-sm text-foreground hover:border-primary hover:text-primary transition-colors">
+                    <a
+                      href={p.codeUrl ?? "#"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-border font-semibold text-sm text-foreground hover:border-primary hover:text-primary transition-colors"
+                    >
                       <Github size={15} /> Code
                     </a>
                   </div>
@@ -139,7 +155,12 @@ export function Projects() {
         </motion.div>
 
         <div className="flex justify-center mt-14">
-          <a href="#" className="inline-flex items-center gap-2 px-7 py-4 rounded-2xl border-2 border-border bg-card font-semibold text-primary hover:border-primary hover:shadow-[var(--shadow-glow)] transition-all">
+          <a
+            href={GITHUB_PROFILE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-7 py-4 rounded-2xl border-2 border-border bg-card font-semibold text-primary hover:border-primary hover:shadow-[var(--shadow-glow)] transition-all"
+          >
             <Github size={18} /> Voir tous mes projets sur GitHub
           </a>
         </div>
