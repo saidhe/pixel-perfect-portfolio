@@ -4,11 +4,8 @@
   "outputDirectory": ".vercel/output",
   "routes": [
     {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/__server"
+      "src": "^/(.*)$",
+      "dest": "/api/__server"
     }
   ]
 }
