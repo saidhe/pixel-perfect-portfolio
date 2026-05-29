@@ -13,7 +13,7 @@ export function About() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="relative mx-auto w-full max-w-md"
+          className="relative mx-auto w-full max-w-xs lg:max-w-sm"
         >
           <Star className="absolute -left-6 -top-6 h-32 w-32 text-primary/10 fill-primary/10" />
           <div className="relative rounded-3xl overflow-hidden shadow-[var(--shadow-card)] border border-border aspect-[4/5]">
@@ -43,12 +43,12 @@ export function About() {
           </div>
           <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
             Développeur passionné par{" "}
-            <span className="bg-clip-text text-transparent underline decoration-primary/40 underline-offset-4" style={{ backgroundImage: "var(--gradient-primary)" }}>
+            <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-primary)" }}>
               l'impact réel
             </span>
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Je suis <span className="font-bold text-foreground">Xhris Dior</span>, développeur fullstack basé au Cameroun.
+            Je suis <span className="font-bold text-foreground">Idriss Sante</span>, développeur fullstack basé au Cameroun.
             Je crée des applications web et mobiles modernes, performantes et adaptées aux réalités
             locales — avec une expertise particulière sur les marchés francophones d'Afrique (Côte d'Ivoire, Cameroun).
           </p>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Palette, Server, Rocket } from "lucide-react";
+import { Palette, Server, Rocket, Figma } from "lucide-react";
 
 const groups = [
   {
@@ -38,9 +38,21 @@ const groups = [
       ["REST API / JWT", 90],
     ],
   },
+  {
+    icon: Figma,
+    title: "UX / UI Design",
+    grad: "linear-gradient(135deg, oklch(0.68 0.20 25), oklch(0.72 0.18 50))",
+    skills: [
+      ["Figma", 95],
+      ["Adobe XD", 88],
+      ["Prototypage", 92],
+      ["Design System", 90],
+      ["Wireframing", 93],
+    ],
+  },
 ];
 
-const ecosystem = ["React","Next.js","Vue.js","Node.js","Express","TypeScript","PostgreSQL","MySQL","Supabase","Firebase","Prisma","Tailwind CSS","Framer Motion","JWT","REST API","Git","Vercel","Railway"];
+const ecosystem = ["React","Next.js","Node.js","TypeScript","PostgreSQL","MySQL","Supabase","Firebase","Tailwind CSS","Git","Vercel","Figma"];
 
 export function Skills() {
   return (
