@@ -1,5 +1,14 @@
 {
-  "version": 2,
+  "version": 3,
   "buildCommand": "npm run build",
-  "outputDirectory": ".vercel/output"
+  "outputDirectory": ".vercel/output",
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/__server"
+    }
+  ]
 }
