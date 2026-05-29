@@ -80,6 +80,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@idrisssante" },
+      { name: "twitter:title", content: "Idriss Sante — Fullstack Developer" },
+      { name: "twitter:description", content: "Portfolio d'Idriss Sante, Fullstack Developer." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b0f4664c-186f-4e21-94bc-cd1b161ebf5d/id-preview-dda2ff76--e5fbe0e5-20bf-4a1d-a7e4-a66a81af8b98.lovable.app-1780067272231.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b0f4664c-186f-4e21-94bc-cd1b161ebf5d/id-preview-dda2ff76--e5fbe0e5-20bf-4a1d-a7e4-a66a81af8b98.lovable.app-1780067272231.png" },
     ],
     links: [
       {
