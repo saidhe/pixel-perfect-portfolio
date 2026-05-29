@@ -38,9 +38,9 @@ export function Hero() {
           <div className="space-y-3">
             <p className="text-lg text-muted-foreground">Bonjour, je suis 👋</p>
             <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.05]">
-              Xhris{" "}
+              Idriss{" "}
               <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-primary)" }}>
-                Dior
+                Sante
               </span>
             </h1>
             <div className="flex items-center gap-3 pt-1">
@@ -98,7 +98,7 @@ export function Hero() {
           <div className="absolute inset-0 rounded-full" style={{ background: "var(--gradient-primary)", opacity: 0.15 }} />
           <div className="absolute inset-4 rounded-full border-2 border-dashed border-primary/30 animate-[spin_30s_linear_infinite]" />
           <div className="absolute inset-8 rounded-full overflow-hidden border-4 border-card shadow-[var(--shadow-glow)]">
-            <img src={portrait} alt="Xhris Dior" className="w-full h-full object-cover" width={768} height={768} />
+            <img src={portrait} alt="Idriss Sante" className="w-full h-full object-cover" width={768} height={768} />
           </div>
 
           <motion.div

@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const links = [
-  { id: "home", label: "Home" },
-  { id: "about", label: "About" },
-  { id: "skills", label: "Skills" },
-  { id: "projects", label: "Projects" },
+  { id: "home", label: "Accueil" },
+  { id: "about", label: "À propos" },
+  { id: "skills", label: "Compétences" },
+  { id: "projects", label: "Projets" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -46,9 +46,6 @@ export function Navbar() {
           <span className="h-10 w-10 rounded-xl grid place-items-center text-primary-foreground font-bold text-lg shadow-[var(--shadow-glow)]" style={{ background: "var(--gradient-primary)" }}>
             X
           </span>
-          <span className="font-bold text-xl tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
-            Portfolio<span className="text-primary">.</span>
-          </span>
         </button>
 
         <ul className="hidden md:flex items-center gap-1 bg-card/60 backdrop-blur border border-border/60 rounded-full px-2 py-1.5">
@@ -78,7 +75,7 @@ export function Navbar() {
           style={{ background: "var(--gradient-primary)" }}
         >
           <span className="h-2 w-2 rounded-full bg-[oklch(0.75_0.18_150)] animate-pulse" />
-          Hire Me
+          Me recruter
         </button>
 
         <button
@@ -125,7 +122,7 @@ export function Navbar() {
                   style={{ background: "var(--gradient-primary)" }}
                 >
                   <span className="h-2 w-2 rounded-full bg-[oklch(0.75_0.18_150)] animate-pulse" />
-                  Hire Me
+                  Me recruter
                 </button>
               </li>
             </ul>

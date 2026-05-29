@@ -1,10 +1,10 @@
 import { Heart, Github, Linkedin, Twitter, Mail, ArrowUpRight } from "lucide-react";
 
 const nav = [
-  { id: "home", label: "Home" },
-  { id: "about", label: "About" },
-  { id: "skills", label: "Skills" },
-  { id: "projects", label: "Projects" },
+  { id: "home", label: "Accueil" },
+  { id: "about", label: "À propos" },
+  { id: "skills", label: "Compétences" },
+  { id: "projects", label: "Projets" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -12,7 +12,7 @@ const socials = [
   { icon: Github, href: "#", label: "GitHub" },
   { icon: Linkedin, href: "#", label: "LinkedIn" },
   { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Mail, href: "mailto:hello@xhrisdior.dev", label: "Email" },
+  { icon: Mail, href: "mailto:diorrebero84@gmail.com", label: "Email" },
 ];
 
 export function Footer() {
@@ -40,7 +40,7 @@ export function Footer() {
                 className="font-bold text-2xl tracking-tight"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                Xhris Dior<span className="text-primary">.</span>
+                Idriss Sante<span className="text-primary">.</span>
               </span>
             </div>
             <p className="mt-5 text-muted-foreground max-w-md leading-relaxed">
@@ -95,18 +95,18 @@ export function Footer() {
               Un projet en tête ? Discutons-en autour d'un café virtuel.
             </p>
             <a
-              href="mailto:hello@xhrisdior.dev"
+              href="mailto:diorrebero84@gmail.com"
               className="mt-5 inline-flex items-center gap-2 text-primary-foreground px-5 py-3 rounded-full font-semibold text-sm shadow-[var(--shadow-glow)] hover:scale-[1.02] transition-transform"
               style={{ background: "var(--gradient-primary)" }}
             >
-              hello@xhrisdior.dev
+              diorrebero84@gmail.com
               <ArrowUpRight size={16} />
             </a>
           </div>
         </div>
 
         <div className="mt-14 pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <div>© {new Date().getFullYear()} Xhris Dior. Tous droits réservés.</div>
+          <div>© {new Date().getFullYear()} Idriss Sante. Tous droits réservés.</div>
           <div className="flex items-center gap-1.5">
             Made with <Heart size={14} className="fill-primary text-primary" /> au Cameroun
           </div>
