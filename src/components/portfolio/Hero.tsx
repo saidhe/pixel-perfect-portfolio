@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Download, Mail, Github, MessageCircle, Music2, Code2, CheckCircle2 } from "lucide-react";
-import portrait from "@/assets/portrait.jpg";
+import portrait from "@/assets/photo.jpg";
 
 export function Hero() {
   return (

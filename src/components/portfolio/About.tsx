@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Star } from "lucide-react";
-import portrait from "@/assets/portrait.jpg";
+import portrait from "@/assets/photo.jpg";
 
 const tags = ["React", "Next.js", "Node.js", "TypeScript", "PostgreSQL", "Tailwind CSS", "Supabase", "Railway", "Vercel"];
 
@@ -25,7 +25,7 @@ export function About() {
             <div className="text-base mt-1">⚛️ 🟢 🐘</div>
           </div>
           <div className="absolute -bottom-4 right-4 bg-card border border-border rounded-2xl px-5 py-3 shadow-[var(--shadow-card)]">
-            <div className="text-3xl font-extrabold text-primary">2+</div>
+            <div className="text-3xl font-extrabold text-primary">3+</div>
             <div className="text-xs text-muted-foreground">Ans d'expérience</div>
           </div>
         </motion.div>
@@ -50,7 +50,7 @@ export function About() {
           <p className="text-muted-foreground leading-relaxed">
             Je suis <span className="font-bold text-foreground">Idriss Sante</span>, développeur fullstack basé au Cameroun.
             Je crée des applications web et mobiles modernes, performantes et adaptées aux réalités
-            locales — avec une expertise particulière sur les marchés francophones d'Afrique (Côte d'Ivoire, Cameroun).
+            locales — avec une expertise particulière sur les marchés francophones d'Afrique.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             Mon approche : concevoir des produits qui résolvent de vrais problèmes, avec une UX soignée,

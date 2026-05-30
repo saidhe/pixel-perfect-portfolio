@@ -42,9 +42,12 @@ export function Navbar() {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
-        <button onClick={() => scrollTo("home")} className="flex items-center gap-2 group">
+       <button onClick={() => scrollTo("home")} className="flex items-center gap-2 group">
           <span className="h-10 w-10 rounded-xl grid place-items-center text-primary-foreground font-bold text-lg shadow-[var(--shadow-glow)]" style={{ background: "var(--gradient-primary)" }}>
             X
+          </span>
+          <span className="font-bold text-xl tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
+            Portfolio<span className="text-primary">.</span>
           </span>
         </button>
 
@@ -75,7 +78,7 @@ export function Navbar() {
           style={{ background: "var(--gradient-primary)" }}
         >
           <span className="h-2 w-2 rounded-full bg-[oklch(0.75_0.18_150)] animate-pulse" />
-          Me recruter
+          Me conctacter
         </button>
 
         <button
@@ -122,7 +125,7 @@ export function Navbar() {
                   style={{ background: "var(--gradient-primary)" }}
                 >
                   <span className="h-2 w-2 rounded-full bg-[oklch(0.75_0.18_150)] animate-pulse" />
-                  Me recruter
+                  Me contacter
                 </button>
               </li>
             </ul>

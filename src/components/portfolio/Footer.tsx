@@ -12,7 +12,7 @@ const socials = [
   { icon: Github, href: "#", label: "GitHub" },
   { icon: Linkedin, href: "#", label: "LinkedIn" },
   { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Mail, href: "mailto:diorrebero84@gmail.com", label: "Email" },
+  { icon: Mail, href: "mailto:santeidriss4@gmail.com", label: "Email" },
 ];
 
 export function Footer() {
@@ -99,7 +99,7 @@ export function Footer() {
               className="mt-5 inline-flex items-center gap-2 text-primary-foreground px-5 py-3 rounded-full font-semibold text-sm shadow-[var(--shadow-glow)] hover:scale-[1.02] transition-transform"
               style={{ background: "var(--gradient-primary)" }}
             >
-              diorrebero84@gmail.com
+              santeidriss4@gmail.com
               <ArrowUpRight size={16} />
             </a>
           </div>
