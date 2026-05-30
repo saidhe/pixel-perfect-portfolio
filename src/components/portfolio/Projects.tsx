@@ -24,7 +24,27 @@ const projects: Project[] = [
   { title: "Miss & Master IAI Mbalmayo", category: "Vote Platform", featured: true, icon: Crown, grad: "linear-gradient(135deg, oklch(0.65 0.25 350), oklch(0.60 0.24 0))",
     description: "Site de vote en ligne pour concours universitaire à IAI Mbalmayo. QR codes, résultats temps réel, anti-fraude, gestion admin des candidats. Migré vers Next.js 15.",
     tags: ["Next.js", "Supabase", "QR Code"] },
-  
+  { title: "EcoShop CM", category: "Green Tech", icon: Leaf, grad: "linear-gradient(135deg, oklch(0.65 0.20 150), oklch(0.70 0.18 165))",
+    description: "E-commerce de produits éco-responsables au Cameroun. Catalogue, panier, paiement Mobile Money, livraison locale.",
+    tags: ["React", "Node.js", "MySQL", "Railway", "Vercel"] },
+  { title: "EduConnect", category: "EdTech", icon: GraduationCap, grad: "linear-gradient(135deg, oklch(0.60 0.22 230), oklch(0.65 0.20 250))",
+    description: "Plateforme d'apprentissage en ligne pour étudiants francophones. Cours vidéo, quiz, suivi de progression.",
+    tags: ["Next.js", "Supabase", "Stripe"] },
+  { title: "SocialBuzz", category: "Social App", icon: Users, grad: "linear-gradient(135deg, oklch(0.65 0.22 30), oklch(0.70 0.20 50))",
+    description: "Mini réseau social pour communautés universitaires. Feed temps réel, messagerie, notifications push.",
+    tags: ["React Native", "Firebase"] },
+  { title: "FinTrack CFA", category: "FinTech", icon: Coins, grad: "linear-gradient(135deg, oklch(0.55 0.20 200), oklch(0.60 0.22 220))",
+    description: "App de gestion budgétaire pour la zone CFA. Catégorisation automatique, objectifs, statistiques visuelles.",
+    tags: ["React", "Node.js", "PostgreSQL"] },
+  { title: "VillageHub", category: "Community App", icon: Heart, grad: "linear-gradient(135deg, oklch(0.60 0.24 5), oklch(0.65 0.22 25))",
+    description: "Plateforme de mise en relation communautaire pour villages africains. Annonces, événements, entraide.",
+    tags: ["Next.js", "Supabase", "Tailwind"] },
+  { title: "Portfolio Koume Lindor", category: "Portfolio", icon: Sprout, grad: "linear-gradient(135deg, oklch(0.60 0.22 300), oklch(0.65 0.20 320))",
+    description: "Portfolio single-page HTML/CSS/JS pour étudiant en génie environnemental à Ebolowa. Palette violet/blanc/vert, timeline interactive, animations scroll. Déployé via Netlify Drop.",
+    tags: ["HTML", "CSS", "JavaScript", "Animations", "Netlify"] },
+  { title: "Portfolio Xhris Dior", category: "Portfolio", icon: Laptop, grad: "linear-gradient(135deg, oklch(0.55 0.24 262), oklch(0.65 0.22 235))",
+    description: "Portfolio personnel React + Vite + Tailwind + Framer Motion. Thème bleu/blanc, présente mes projets et compétences. Déployé sur Netlify.",
+    tags: ["React", "Vite", "Tailwind", "Framer Motion", "Netlify"] },
 ];
 
 const categories = ["Tous", "Marketplace", "AI Platform", "Vote Platform", "Social App", "EdTech", "Community App", "Green Tech", "FinTech", "Portfolio"];

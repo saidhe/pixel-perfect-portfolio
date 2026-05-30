@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Star } from "lucide-react";
-import portrait from "@/assets/photo.jpg";
+import portrait from "@/assets/portrait.jpg";
 
 const tags = ["React", "Next.js", "Node.js", "TypeScript", "PostgreSQL", "Tailwind CSS", "Supabase", "Railway", "Vercel"];
 
