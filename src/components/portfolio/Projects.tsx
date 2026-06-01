@@ -14,20 +14,24 @@ type Project = {
   codeUrl?: string;
 };
 
+// 👉 Remplace les "#" ci-dessous par tes vrais liens (Live = site déployé, Code = repo GitHub)
 const projects: Project[] = [
- 
   { title: "CreatorZap", category: "AI Platform", featured: true, icon: Zap, grad: "linear-gradient(135deg, oklch(0.60 0.25 25), oklch(0.55 0.24 15))",
     description: "Plateforme IA de création de contenu pour créateurs africains. Abstraction multi-LLM (OpenAI, Together AI, Groq, OpenRouter), paiement Fapshi, thème dark crimson, bilingue FR/EN.",
-    tags: ["Next.js", "OpenAI", "Together AI", "Fapshi"] },
+    tags: ["Next.js", "OpenAI", "Together AI", "Fapshi"],
+    liveUrl: "#", codeUrl: "#" },
   { title: "EduConnect", category: "EdTech", icon: GraduationCap, grad: "linear-gradient(135deg, oklch(0.60 0.22 230), oklch(0.65 0.20 250))",
     description: "Plateforme d'apprentissage en ligne pour étudiants francophones. Cours vidéo, quiz, suivi de progression.",
-    tags: ["Next.js", "Supabase", "Stripe"] },
+    tags: ["Next.js", "Supabase", "Stripe"],
+    liveUrl: "#", codeUrl: "#" },
   { title: "SocialBuzz", category: "Social App", icon: Users, grad: "linear-gradient(135deg, oklch(0.65 0.22 30), oklch(0.70 0.20 50))",
     description: "Mini réseau social pour communautés universitaires. Feed temps réel, messagerie, notifications push.",
-    tags: ["React Native", "Firebase"] },
-  { title: "Portfolio Xhris Dior", category: "Portfolio", icon: Laptop, grad: "linear-gradient(135deg, oklch(0.55 0.24 262), oklch(0.65 0.22 235))",
-    description: "Portfolio personnel React + Vite + Tailwind + Framer Motion. Thème bleu/blanc, présente mes projets et compétences. Déployé sur Netlify.",
-    tags: ["React", "Vite", "Tailwind", "Framer Motion", "Netlify"] },
+    tags: ["React Native", "Firebase"],
+    liveUrl: "#", codeUrl: "#" },
+  { title: "Portfolio Idriss Sante", category: "Portfolio", icon: Laptop, grad: "linear-gradient(135deg, oklch(0.55 0.24 262), oklch(0.65 0.22 235))",
+    description: "Portfolio personnel React + Vite + Tailwind + Framer Motion. Thème bleu/blanc, présente mes projets et compétences.",
+    tags: ["React", "Vite", "Tailwind", "Framer Motion"],
+    liveUrl: "#", codeUrl: "#" },
 ];
 
 const categories = ["Tous", "Marketplace", "AI Platform", "Vote Platform", "Social App", "EdTech", "Community App", "Green Tech", "FinTech", "Portfolio"];
