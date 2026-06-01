@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import { Download, Mail, Github, MessageCircle, Music2, Code2, CheckCircle2 } from "lucide-react";
 import portrait from "@/assets/photo.jpg";
 
+// 👉 Remplace par le lien direct vers ton CV (Google Drive, Dropbox, PDF hébergé...)
+const CV_URL = "#";
+
 export function Hero() {
   return (
     <section id="home" className="relative min-h-screen pt-28 pb-16 overflow-hidden">
@@ -57,11 +60,14 @@ export function Hero() {
 
           <div className="flex flex-wrap gap-3 pt-2">
             <a
-              href="#"
+              href={CV_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              download
               className="inline-flex items-center gap-2 text-primary-foreground px-6 py-3.5 rounded-xl font-semibold shadow-[var(--shadow-glow)] hover:scale-[1.03] transition-transform"
               style={{ background: "var(--gradient-primary)" }}
             >
-              <Download size={18} /> Download CV
+              <Download size={18} /> Télécharger CV
             </a>
             <a
               href="#contact"
