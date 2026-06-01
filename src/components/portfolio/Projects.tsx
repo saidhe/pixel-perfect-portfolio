@@ -139,7 +139,7 @@ export function Projects() {
 
         <div className="flex justify-center mt-14">
           <a
-            href={GITHUB_PROFILE_URL}
+            href="https://github.com/saidhe"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-7 py-4 rounded-2xl border-2 border-border bg-card font-semibold text-primary hover:border-primary hover:shadow-[var(--shadow-glow)] transition-all"
