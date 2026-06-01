@@ -9,15 +9,28 @@ const MY_PHONE = "+237 690 49 19 22";
 export function Contact() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
 
-  const submit = (e: React.FormEvent) => {
+  const [loading, setLoading] = useState(false);
+
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(form.subject || "Contact depuis le portfolio");
-    const body = encodeURIComponent(
-      `Nom: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
-    );
-    window.location.href = `mailto:${MY_EMAIL}?subject=${subject}&body=${body}`;
-    toast.success("Votre client mail s'ouvre — il ne reste qu'à envoyer !");
-    setForm({ name: "", email: "", subject: "", message: "" });
+    setLoading(true);
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) {
+        const { error } = await res.json().catch(() => ({ error: "Erreur" }));
+        throw new Error(error || "Échec de l'envoi");
+      }
+      toast.success("Message envoyé ! Je te réponds très vite.");
+      setForm({ name: "", email: "", subject: "", message: "" });
+    } catch (err) {
+      toast.error((err as Error).message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const infos = [
@@ -114,8 +127,8 @@ export function Contact() {
             <Field label="Message" required>
               <textarea value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} required rows={6} placeholder="Décrivez votre projet ou votre demande..." className="input resize-none" />
             </Field>
-            <button type="submit" className="w-full inline-flex items-center justify-center gap-2 text-primary-foreground px-6 py-4 rounded-xl font-semibold shadow-[var(--shadow-glow)] hover:scale-[1.01] transition-transform" style={{ background: "var(--gradient-primary)" }}>
-              <Send size={18} /> Envoyer le message
+            <button type="submit" disabled={loading} className="w-full inline-flex items-center justify-center gap-2 text-primary-foreground px-6 py-4 rounded-xl font-semibold shadow-[var(--shadow-glow)] hover:scale-[1.01] transition-transform disabled:opacity-60 disabled:cursor-not-allowed" style={{ background: "var(--gradient-primary)" }}>
+              <Send size={18} /> {loading ? "Envoi en cours..." : "Envoyer le message"}
             </button>
           </motion.form>
         </div>
