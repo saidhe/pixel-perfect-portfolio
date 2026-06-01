@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { Download, Mail, Github, MessageCircle, Music2, Code2, CheckCircle2 } from "lucide-react";
 import portrait from "@/assets/photo.jpg";
 
-// 👉 Remplace par le lien direct vers ton CV (Google Drive, Dropbox, PDF hébergé...)
-const CV_URL = "#";
+// CV servi depuis public/cv.pdf — dépose ton PDF dans le dossier public/
+const CV_URL = "/cv.pdf";
 
 export function Hero() {
   return (
