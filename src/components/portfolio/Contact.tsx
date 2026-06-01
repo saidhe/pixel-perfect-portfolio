@@ -3,19 +3,27 @@ import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Send, Github, MessageCircle, Music2 } from "lucide-react";
 import { toast } from "sonner";
 
+const MY_EMAIL = "santeidriss4@gmail.com";
+const MY_PHONE = "+237 690 49 19 22";
+
 export function Contact() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message envoyé ! Je reviens vers vous sous 24h.");
+    const subject = encodeURIComponent(form.subject || "Contact depuis le portfolio");
+    const body = encodeURIComponent(
+      `Nom: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
+    );
+    window.location.href = `mailto:${MY_EMAIL}?subject=${subject}&body=${body}`;
+    toast.success("Votre client mail s'ouvre — il ne reste qu'à envoyer !");
     setForm({ name: "", email: "", subject: "", message: "" });
   };
 
   const infos = [
-    { icon: Mail, label: "Email", value: "diorrebero84@gmail.com" },
+    { icon: Mail, label: "Email", value: MY_EMAIL },
     { icon: MapPin, label: "Localisation", value: "Douala, Cameroun 🇨🇲" },
-    { icon: Phone, label: "Téléphone", value: "+237 6XX XX XX XX" },
+    { icon: Phone, label: "Téléphone", value: MY_PHONE },
   ];
 
   return (
