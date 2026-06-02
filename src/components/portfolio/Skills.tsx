@@ -10,7 +10,6 @@ const groups = [
       ["HTML / CSS", 95],
       ["JavaScript", 90],
       ["React / Next.js", 88],
-      ["Tailwind CSS", 92],
       ["TypeScript", 78],
     ],
   },
@@ -23,7 +22,6 @@ const groups = [
       ["PostgreSQL", 82],
       ["MySQL", 80],
       ["Supabase", 85],
-      ["Firebase", 75],
     ],
   },
   {
@@ -33,9 +31,8 @@ const groups = [
     skills: [
       ["Git / GitHub", 90],
       ["Vercel / Railway", 88],
-      ["Docker (bases)", 60],
-      ["Linux / VPS", 72],
-      ["REST API / JWT", 90],
+      ["Docker (bases)", 50],
+      ["REST API", 90],
     ],
   },
   {
