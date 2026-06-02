@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import { Download, Mail, Github, MessageCircle, Music2, Code2, CheckCircle2 } from "lucide-react";
 import portrait from "@/assets/photo.jpg";
 
-// CV servi depuis public/cv.pdf — dépose ton PDF dans le dossier public/
-const CV_URL = "/cv.pdf";
+// CV servi depuis public/cv.jpg (ou .png) — dépose ton image dans le dossier public/
+// Tu peux remplacer par "/cv.png" si tu utilises un PNG.
+const CV_URL = "/cv.jpg";
+const CV_FILENAME = "CV-Idriss-Sante.jpg";
 
 export function Hero() {
   return (
@@ -61,9 +63,7 @@ export function Hero() {
           <div className="flex flex-wrap gap-3 pt-2">
             <a
               href={CV_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              download
+              download={CV_FILENAME}
               className="inline-flex items-center gap-2 text-primary-foreground px-6 py-3.5 rounded-xl font-semibold shadow-[var(--shadow-glow)] hover:scale-[1.03] transition-transform"
               style={{ background: "var(--gradient-primary)" }}
             >
