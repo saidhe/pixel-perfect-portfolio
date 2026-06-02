@@ -30,14 +30,14 @@ const projects: Project[] = [
     description: "Application web de gestion et de fiabilisation des numéros de téléphone. Elle permet de vérifier le format des numéros, de nettoyer automatiquement les données et de stocker les numéros valides dans une base de données.",
     tags: ["Php", "My SQL"],
     liveUrl: "https://firsttrust.netlify.app/", codeUrl: "https://github.com/saidhe/THEME_FIRST-TRUST" },
-  { title: "Dashboard Analytics", category: "Design", icon: Layout, grad: "linear-gradient(135deg, oklch(0.65 0.20 290), oklch(0.60 0.22 320))",
-    description: "Maquette UI/UX d’un tableau de bord analytique moderne pensé pour les startups SaaS. Hiérarchie visuelle claire, composants réutilisables et système de design cohérent pour une lecture rapide des KPIs.",
-    tags: ["Figma", "UI/UX", "Design System"],
-    designUrl: "#" },
-  { title: "Mobile Banking App", category: "Design", icon: Palette, grad: "linear-gradient(135deg, oklch(0.62 0.20 160), oklch(0.58 0.22 190))",
-    description: "Concept de design d’une application mobile bancaire centrée sur la simplicité et la confiance. Parcours utilisateur fluide, micro-interactions soignées et palette accessible pour tous les profils d’utilisateurs.",
-    tags: ["Figma", "Mobile", "Prototype"],
-    designUrl: "#" },
+  { title: "educreate-platform", category: "Design", icon: Layout, grad: "linear-gradient(135deg, oklch(0.65 0.20 290), oklch(0.60 0.22 320))",
+    description: "Educreate est une plateforme web d’évaluation permettant aux étudiants de composer leurs examens localement dans un environnement numérique sécurisé, puis de soumettre leurs épreuves une fois terminées. Le système intègre une intelligence artificielle capable d’assister la correction et l’évaluation des réponses afin d’optimiser le processus de notation et le suivi académique.",
+    tags: ["Figma", "UI/UX", , "Prototype"],
+    designUrl: "https://www.figma.com/design/L4z4YA3mEFHEdMOoSd3Li9/Sans-titre?node-id=0-1&t=GB1FF6s3RUTi2o3E-1" },
+  { title: "First trust", category: "Design", icon: Palette, grad: "linear-gradient(135deg, oklch(0.62 0.20 160), oklch(0.58 0.22 190))",
+    description: "Maquette UI/UX d’une application web de fiabilisation des numéros de téléphone. Le design a été conçu pour simplifier la validation, la gestion et l’organisation des données utilisateurs grâce à une interface moderne et intuitive.",
+    tags: ["Figma", "UI/UX", "Prototype"],
+    designUrl: "https://www.figma.com/design/2sSNqlt0Zc2BXsQoCrU9E1/Untitled?node-id=0-1&t=VhBhq3WPZR3bq1tz-1" },
 ];
 
 const categories = ["Tous", "AI Platform", "Social App", "EdTech", "Design"];
