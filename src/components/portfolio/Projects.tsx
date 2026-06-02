@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Github, ExternalLink, Star, Wrench, Zap, Crown, Leaf, Laptop, Heart, GraduationCap, Users, Sprout, Coins } from "lucide-react";
+import { Github, ExternalLink, Star, Wrench, Zap, Crown, Leaf, Laptop, Heart, GraduationCap, Users, Sprout, Coins, Clock, Figma, Palette, Layout } from "lucide-react";
 
 type Project = {
   title: string;
@@ -12,6 +12,8 @@ type Project = {
   grad: string;
   liveUrl?: string;
   codeUrl?: string;
+  designUrl?: string;
+  status?: "in-progress";
 };
 
 // 👉 Remplace les "#" ci-dessous par tes vrais liens (Live = site déployé, Code = repo GitHub)
@@ -23,15 +25,22 @@ const projects: Project[] = [
   { title: "Agence-Voyage", category: "EdTech", icon: GraduationCap, grad: "linear-gradient(135deg, oklch(0.60 0.22 230), oklch(0.65 0.20 250))",
     description: "Plateforme web dédiée aux agences de transport au Cameroun, facilitant la réservation de billets, la gestion des trajets et la consultation des horaires. L’application améliore l’expérience utilisateur grâce à une interface moderne, rapide et adaptée au contexte local.",
     tags: ["React.Js", "Supabase", "Stripe"],
-    liveUrl: "#", codeUrl: "https://github.com/saidhe/voyage-facile" },
+    status: "in-progress" },
   { title: "FIRST TRUST", category: "Social App", icon: Users, grad: "linear-gradient(135deg, oklch(0.65 0.22 30), oklch(0.70 0.20 50))",
     description: "Application web de gestion et de fiabilisation des numéros de téléphone. Elle permet de vérifier le format des numéros, de nettoyer automatiquement les données et de stocker les numéros valides dans une base de données.",
     tags: ["Php", "My SQL"],
     liveUrl: "https://firsttrust.netlify.app/", codeUrl: "https://github.com/saidhe/THEME_FIRST-TRUST" },
-  
+  { title: "Dashboard Analytics", category: "Design", icon: Layout, grad: "linear-gradient(135deg, oklch(0.65 0.20 290), oklch(0.60 0.22 320))",
+    description: "Maquette UI/UX d’un tableau de bord analytique moderne pensé pour les startups SaaS. Hiérarchie visuelle claire, composants réutilisables et système de design cohérent pour une lecture rapide des KPIs.",
+    tags: ["Figma", "UI/UX", "Design System"],
+    designUrl: "#" },
+  { title: "Mobile Banking App", category: "Design", icon: Palette, grad: "linear-gradient(135deg, oklch(0.62 0.20 160), oklch(0.58 0.22 190))",
+    description: "Concept de design d’une application mobile bancaire centrée sur la simplicité et la confiance. Parcours utilisateur fluide, micro-interactions soignées et palette accessible pour tous les profils d’utilisateurs.",
+    tags: ["Figma", "Mobile", "Prototype"],
+    designUrl: "#" },
 ];
 
-const categories = ["Tous", "AI Platform", "Social App", "EdTech"];
+const categories = ["Tous", "AI Platform", "Social App", "EdTech", "Design"];
 
 // TODO: Remplace par ton lien GitHub principal (page "tous les projets")
 const GITHUB_PROFILE_URL = "#";
@@ -114,6 +123,22 @@ export function Projects() {
                     ))}
                   </div>
                   <div className="flex gap-2 pt-2">
+                    {p.status === "in-progress" ? (
+                      <span className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-accent text-primary font-semibold text-sm">
+                        <Clock size={15} /> En cours
+                      </span>
+                    ) : p.designUrl ? (
+                      <a
+                        href={p.designUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-primary-foreground font-semibold text-sm shadow-[var(--shadow-glow)] hover:scale-[1.02] transition-transform"
+                        style={{ background: "var(--gradient-primary)" }}
+                      >
+                        <Figma size={15} /> Voir la maquette
+                      </a>
+                    ) : (
+                      <>
                     <a
                       href={p.liveUrl ?? "#"}
                       target="_blank"
@@ -131,6 +156,8 @@ export function Projects() {
                     >
                       <Github size={15} /> Code
                     </a>
+                      </>
+                    )}
                   </div>
                 </div>
               </motion.article>
