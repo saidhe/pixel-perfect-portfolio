@@ -1,11 +1,17 @@
 import { motion } from "framer-motion";
-import { Download, Mail, Github, MessageCircle, Music2, Code2, CheckCircle2 } from "lucide-react";
+import { Download, Mail, Github, MessageCircle, Code2, CheckCircle2 } from "lucide-react";
 import portrait from "@/assets/photo.jpg";
 
 // CV servi depuis public/cv.jpg (ou .png) — dépose ton image dans le dossier public/
 // Tu peux remplacer par "/cv.png" si tu utilises un PNG.
 const CV_URL = "/photo.jpeg";
 const CV_FILENAME = "CV-Idriss-Sante.jpeg";
+
+// 👉 Remplace par tes vrais liens pour chaque icône
+const SOCIAL_LINKS = [
+  { Icon: Github, href: "https://github.com/saidhe", label: "GitHub" },
+  { Icon: MessageCircle, href: "https://wa.me/237690491922", label: "WhatsApp" },
+];
 
 export function Hero() {
   return (
@@ -29,10 +35,13 @@ export function Hero() {
           </div>
 
           <div className="flex gap-3">
-            {[Github, MessageCircle, Music2].map((Icon, i) => (
+            {SOCIAL_LINKS.map(({ Icon, href, label }) => (
               <a
-                key={i}
-                href="https://github.com/saidhe"
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
                 className="h-11 w-11 rounded-full border border-border bg-card grid place-items-center text-muted-foreground hover:text-primary hover:border-primary hover:-translate-y-1 transition-all"
               >
                 <Icon size={18} />

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone, Send, Github, MessageCircle, Music2 } from "lucide-react";
+import { Mail, MapPin, Phone, Send, Github, MessageCircle } from "lucide-react";
 import { toast } from "sonner";
 
 const MY_EMAIL = "santeidriss4@gmail.com";
@@ -37,6 +37,12 @@ export function Contact() {
     { icon: Mail, label: "Email", value: MY_EMAIL },
     { icon: MapPin, label: "Localisation", value: "Douala, Cameroun 🇨🇲" },
     { icon: Phone, label: "Téléphone", value: MY_PHONE },
+  ];
+
+  // 👉 Remplace par tes vrais liens pour chaque icône
+  const socials = [
+    { Icon: Github, href: "https://github.com/saidhe", label: "GitHub" },
+    { Icon: MessageCircle, href: "https://wa.me/237690491922", label: "WhatsApp" },
   ];
 
   return (
@@ -97,8 +103,15 @@ export function Contact() {
             ))}
 
             <div className="flex gap-3 pt-2">
-              {[Github, MessageCircle, Music2].map((Icon, i) => (
-                <a key={i} href="#" className="h-12 w-12 rounded-xl border border-border bg-card grid place-items-center text-muted-foreground hover:text-primary hover:border-primary transition-colors">
+              {socials.map(({ Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="h-12 w-12 rounded-xl border border-border bg-card grid place-items-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+                >
                   <Icon size={18} />
                 </a>
               ))}
