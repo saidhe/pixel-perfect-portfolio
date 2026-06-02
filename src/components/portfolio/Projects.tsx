@@ -31,7 +31,7 @@ const projects: Project[] = [
   
 ];
 
-const categories = ["Tous", "Marketplace", "AI Platform", "Vote Platform", "Social App", "EdTech", "Community App", "Green Tech", "FinTech", "Portfolio"];
+const categories = ["Tous", "AI Platform", "Social App", "EdTech"];
 
 // TODO: Remplace par ton lien GitHub principal (page "tous les projets")
 const GITHUB_PROFILE_URL = "#";

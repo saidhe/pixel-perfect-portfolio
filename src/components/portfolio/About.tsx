@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Star } from "lucide-react";
 import portrait from "@/assets/photo.jpg";
 
-const tags = ["React", "Next.js", "Node.js", "TypeScript", "PostgreSQL", "Tailwind CSS", "Supabase", "Railway", "Vercel"];
+const tags = ["React", "Next.js", "Node.js", "TypeScript", "PostgreSQL",  "Supabase", "Vercel"];
 
 export function About() {
   return (
@@ -49,13 +49,16 @@ export function About() {
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             Je suis <span className="font-bold text-foreground">Idriss Sante</span>, développeur fullstack basé au Cameroun.
-            Je crée des applications web et mobiles modernes, performantes et adaptées aux réalités
-            locales — avec une expertise particulière sur les marchés francophones d'Afrique.
+             Je conçois des applications web modernes, performantes 
+             et adaptées aux besoins des entreprises et particuliers.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Mon approche : concevoir des produits qui résolvent de vrais problèmes, avec une UX soignée,
-            une architecture robuste, et un déploiement cloud fiable. Du backend Node.js/Express au frontend
-            React/Next.js, en passant par les bases de données PostgreSQL et MySQL.
+            Mon objectif : créer des solutions digitales utiles, sécurisées
+            et simples à utiliser, avec une attention particulière portée à l’expérience utilisateur et à la qualité du développement.
+            
+          </p>
+           <p className="text-muted-foreground leading-relaxed">
+            Du frontend au backend, je développe des projets allant des applications web aux plateformes de gestion, en utilisant des technologies modernes pour transformer les idées en solutions concrètes. 
           </p>
 
           <div className="flex flex-wrap gap-2">
