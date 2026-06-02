@@ -52,7 +52,7 @@ const groups = [
   },
 ];
 
-const ecosystem = ["React","Next.js","Node.js","TypeScript","PostgreSQL","MySQL","Supabase","Firebase","Tailwind CSS","Git","Vercel","Figma"];
+const ecosystem = ["React Js","React Native","Node.js","TypeScript","MySQL","Supabase","Git","Vercel","Figma"];
 
 export function Skills() {
   return (

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Send, Github, MessageCircle } from "lucide-react";
 import { toast } from "sonner";
 
-const MY_EMAIL = "santeidriss4@gmail.com";
+const MY_EMAIL = "santeidriss@equipevalinsky.online";
 const MY_PHONE = "+237 690 49 19 22";
 
 export function Contact() {

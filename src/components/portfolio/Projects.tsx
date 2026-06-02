@@ -27,7 +27,7 @@ const projects: Project[] = [
   { title: "FIRST TRUST", category: "Social App", icon: Users, grad: "linear-gradient(135deg, oklch(0.65 0.22 30), oklch(0.70 0.20 50))",
     description: "Application web de gestion et de fiabilisation des numéros de téléphone. Elle permet de vérifier le format des numéros, de nettoyer automatiquement les données et de stocker les numéros valides dans une base de données.",
     tags: ["Php", "My SQL"],
-    liveUrl: "#", codeUrl: "https://github.com/saidhe/THEME_FIRST-TRUST" },
+    liveUrl: "https://firsttrust.netlify.app/", codeUrl: "https://github.com/saidhe/THEME_FIRST-TRUST" },
   
 ];
 

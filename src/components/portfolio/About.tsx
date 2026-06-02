@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Star } from "lucide-react";
 import portrait from "@/assets/photo.jpg";
 
-const tags = ["React", "Next.js", "Node.js", "TypeScript", "PostgreSQL",  "Supabase", "Vercel"];
+const tags = ["React Js", "React Native", "Node.js", "TypeScript", "PostgreSQL",  "Supabase", "Vercel"];
 
 export function About() {
   return (

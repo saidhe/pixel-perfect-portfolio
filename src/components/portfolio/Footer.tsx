@@ -11,7 +11,7 @@ const nav = [
 const socials = [
   { icon: Github, href: "https://github.com/saidhe", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/lg-big-valinsky-296732303", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:santeidriss4@gmail.com", label: "Email" },
+  { icon: Mail, href: "mailto:santeidriss@equipevalinsky.online", label: "Email" },
 ];
 
 export function Footer() {
@@ -94,11 +94,11 @@ export function Footer() {
               Un projet en tête ? Discutons-en autour d'un café virtuel.
             </p>
             <a
-              href="mailto:santeidriss4@gmail.com"
+              href="mailto:santeidriss@equipevalinsky.online"
               className="mt-5 inline-flex items-center gap-2 text-primary-foreground px-5 py-3 rounded-full font-semibold text-sm shadow-[var(--shadow-glow)] hover:scale-[1.02] transition-transform"
               style={{ background: "var(--gradient-primary)" }}
             >
-              santeidriss4@gmail.com
+              santeidriss@equipevalinsky.online
               <ArrowUpRight size={16} />
             </a>
           </div>
