@@ -4,8 +4,8 @@ import portrait from "@/assets/photo.jpg";
 
 // CV servi depuis public/cv.jpg (ou .png) — dépose ton image dans le dossier public/
 // Tu peux remplacer par "/cv.png" si tu utilises un PNG.
-const CV_URL = "/cv.jpg";
-const CV_FILENAME = "CV-Idriss-Sante.jpg";
+const CV_URL = "/photo.jpeg";
+const CV_FILENAME = "CV-Idriss-Sante.jpeg";
 
 export function Hero() {
   return (
@@ -32,7 +32,7 @@ export function Hero() {
             {[Github, MessageCircle, Music2].map((Icon, i) => (
               <a
                 key={i}
-                href="#"
+                href="https://github.com/saidhe"
                 className="h-11 w-11 rounded-full border border-border bg-card grid place-items-center text-muted-foreground hover:text-primary hover:border-primary hover:-translate-y-1 transition-all"
               >
                 <Icon size={18} />

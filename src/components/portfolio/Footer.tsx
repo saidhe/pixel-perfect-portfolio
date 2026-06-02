@@ -9,9 +9,8 @@ const nav = [
 ];
 
 const socials = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Github, href: "https://github.com/saidhe", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/lg-big-valinsky-296732303", label: "LinkedIn" },
   { icon: Mail, href: "mailto:santeidriss4@gmail.com", label: "Email" },
 ];
 
@@ -95,7 +94,7 @@ export function Footer() {
               Un projet en tête ? Discutons-en autour d'un café virtuel.
             </p>
             <a
-              href="mailto:diorrebero84@gmail.com"
+              href="mailto:santeidriss4@gmail.com"
               className="mt-5 inline-flex items-center gap-2 text-primary-foreground px-5 py-3 rounded-full font-semibold text-sm shadow-[var(--shadow-glow)] hover:scale-[1.02] transition-transform"
               style={{ background: "var(--gradient-primary)" }}
             >
@@ -108,7 +107,7 @@ export function Footer() {
         <div className="mt-14 pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <div>© {new Date().getFullYear()} Idriss Sante. Tous droits réservés.</div>
           <div className="flex items-center gap-1.5">
-            Made with <Heart size={14} className="fill-primary text-primary" /> au Cameroun
+            #equipevalinsky with <Heart size={14} className="fill-primary text-primary" /> au Cameroun
           </div>
         </div>
       </div>

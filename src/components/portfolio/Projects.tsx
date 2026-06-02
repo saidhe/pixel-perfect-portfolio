@@ -16,22 +16,19 @@ type Project = {
 
 // 👉 Remplace les "#" ci-dessous par tes vrais liens (Live = site déployé, Code = repo GitHub)
 const projects: Project[] = [
-  { title: "CreatorZap", category: "AI Platform", featured: true, icon: Zap, grad: "linear-gradient(135deg, oklch(0.60 0.25 25), oklch(0.55 0.24 15))",
-    description: "Plateforme IA de création de contenu pour créateurs africains. Abstraction multi-LLM (OpenAI, Together AI, Groq, OpenRouter), paiement Fapshi, thème dark crimson, bilingue FR/EN.",
-    tags: ["Next.js", "OpenAI", "Together AI", "Fapshi"],
-    liveUrl: "#", codeUrl: "https://github.com/saidhe/adj-connect-hub" },
-  { title: "EduConnect", category: "EdTech", icon: GraduationCap, grad: "linear-gradient(135deg, oklch(0.60 0.22 230), oklch(0.65 0.20 250))",
-    description: "Plateforme d'apprentissage en ligne pour étudiants francophones. Cours vidéo, quiz, suivi de progression.",
-    tags: ["Next.js", "Supabase", "Stripe"],
+  { title: "AJD-Conference", category: "AI Platform", featured: true, icon: Zap, grad: "linear-gradient(135deg, oklch(0.60 0.25 25), oklch(0.55 0.24 15))",
+    description: "Plateforme de gestion de conférences permettant d’organiser des événements, gérer les inscriptions des participants et structurer les programmes. Elle optimise la coordination des événements grâce à une interface intuitive et centralisée.",
+    tags: ["React.Js",, "Stripe"],
+    liveUrl: "https://ajd-eight.vercel.app/", codeUrl: "https://github.com/saidhe/adj-connect-hub" },
+  { title: "Agence-Voyage", category: "EdTech", icon: GraduationCap, grad: "linear-gradient(135deg, oklch(0.60 0.22 230), oklch(0.65 0.20 250))",
+    description: "Plateforme web dédiée aux agences de transport au Cameroun, facilitant la réservation de billets, la gestion des trajets et la consultation des horaires. L’application améliore l’expérience utilisateur grâce à une interface moderne, rapide et adaptée au contexte local.",
+    tags: ["React.Js", "Supabase", "Stripe"],
     liveUrl: "#", codeUrl: "https://github.com/saidhe/voyage-facile" },
-  { title: "SocialBuzz", category: "Social App", icon: Users, grad: "linear-gradient(135deg, oklch(0.65 0.22 30), oklch(0.70 0.20 50))",
-    description: "Mini réseau social pour communautés universitaires. Feed temps réel, messagerie, notifications push.",
-    tags: ["React Native", "Firebase"],
-    liveUrl: "#", codeUrl: "#" },
-  { title: "Portfolio Idriss Sante", category: "Portfolio", icon: Laptop, grad: "linear-gradient(135deg, oklch(0.55 0.24 262), oklch(0.65 0.22 235))",
-    description: "Portfolio personnel React + Vite + Tailwind + Framer Motion. Thème bleu/blanc, présente mes projets et compétences.",
-    tags: ["React", "Vite", "Tailwind", "Framer Motion"],
-    liveUrl: "#", codeUrl: "#" },
+  { title: "FIRST TRUST", category: "Social App", icon: Users, grad: "linear-gradient(135deg, oklch(0.65 0.22 30), oklch(0.70 0.20 50))",
+    description: "Application web de gestion et de fiabilisation des numéros de téléphone. Elle permet de vérifier le format des numéros, de nettoyer automatiquement les données et de stocker les numéros valides dans une base de données.",
+    tags: ["Php", "My SQL"],
+    liveUrl: "#", codeUrl: "https://github.com/saidhe/THEME_FIRST-TRUST" },
+  
 ];
 
 const categories = ["Tous", "Marketplace", "AI Platform", "Vote Platform", "Social App", "EdTech", "Community App", "Green Tech", "FinTech", "Portfolio"];
