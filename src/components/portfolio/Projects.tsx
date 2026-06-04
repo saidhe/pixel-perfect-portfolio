@@ -38,9 +38,13 @@ const projects: Project[] = [
     description: "Maquette UI/UX d’une application web de fiabilisation des numéros de téléphone. Le design a été conçu pour simplifier la validation, la gestion et l’organisation des données utilisateurs grâce à une interface moderne et intuitive.",
     tags: ["Figma", "UI/UX", "Prototype"],
     designUrl: "https://www.figma.com/design/2sSNqlt0Zc2BXsQoCrU9E1/Untitled?node-id=0-1&t=VhBhq3WPZR3bq1tz-1" },
+  { title: "Gestion-Hospitaliere", category: "Health", icon: Hospital, grad: "linear-gradient(135deg, oklch(0.55 0.18 160), oklch(0.50 0.16 180))",
+    description: "Application mobile de gestion hospitalière développée avec Expo et React Native permettant la gestion des patients, la consultation des informations médicales, l’organisation des services hospitaliers et l’amélioration de l’expérience utilisateur grâce à une interface moderne, intuitive et responsive.",
+    tags: ["React Native", "Expo", "Supabase"],
+    status: "in-progress" },
 ];
 
-const categories = ["Tous", "AI Platform", "Social App", "EdTech", "Design"];
+const categories = ["Tous", "AI Platform", "Social App", "EdTech", "Design", "Health"];
 
 // TODO: Remplace par ton lien GitHub principal (page "tous les projets")
 const GITHUB_PROFILE_URL = "#";
