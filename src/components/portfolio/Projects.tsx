@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Github, ExternalLink, Star, Wrench, Zap, Crown, Leaf, Laptop, Heart, GraduationCap, Users, Sprout, Coins, Clock, Figma, Palette, Layout, Hospital } from "lucide-react";
+import { Github, ExternalLink, Star, Wrench, Zap, Crown, Leaf, Laptop, Heart, GraduationCap, Users, Sprout, Coins, Clock, Figma, Palette, Layout, Hospital, Lock } from "lucide-react";
 
 type Project = {
   title: string;
@@ -14,6 +14,7 @@ type Project = {
   codeUrl?: string;
   designUrl?: string;
   status?: "in-progress";
+  private?: boolean;
 };
 
 // 👉 Remplace les "#" ci-dessous par tes vrais liens (Live = site déployé, Code = repo GitHub)
@@ -21,7 +22,7 @@ const projects: Project[] = [
   { title: "AJD-Conference", category: "AI Platform", featured: true, icon: Zap, grad: "linear-gradient(135deg, oklch(0.60 0.25 25), oklch(0.55 0.24 15))",
     description: "Plateforme de gestion de conférences permettant d’organiser des événements, gérer les inscriptions des participants et structurer les programmes. Elle optimise la coordination des événements grâce à une interface intuitive et centralisée.",
     tags: ["React.Js", "Supabase", "Stripe"],
-    liveUrl: "https://ajd-eight.vercel.app/", codeUrl: "https://github.com/saidhe/adj-connect-hub" },
+    liveUrl: "https://ajd-eight.vercel.app/", private: true },
   { title: "Agence-Voyage", category: "EdTech", icon: GraduationCap, grad: "linear-gradient(135deg, oklch(0.60 0.22 230), oklch(0.65 0.20 250))",
     description: "Plateforme web dédiée aux agences de transport au Cameroun, facilitant la réservation de billets, la gestion des trajets et la consultation des horaires. L’application améliore l’expérience utilisateur grâce à une interface moderne, rapide et adaptée au contexte local.",
     tags: ["React.Js", "Supabase", "Stripe"],
@@ -29,7 +30,7 @@ const projects: Project[] = [
   { title: "FIRST TRUST", category: "Social App", icon: Users, grad: "linear-gradient(135deg, oklch(0.65 0.22 30), oklch(0.70 0.20 50))",
     description: "Application web de gestion et de fiabilisation des numéros de téléphone. Elle permet de vérifier le format des numéros, de nettoyer automatiquement les données et de stocker les numéros valides dans une base de données.",
     tags: ["Php", "My SQL"],
-    liveUrl: "https://firsttrust.netlify.app/", codeUrl: "https://github.com/saidhe/THEME_FIRST-TRUST" },
+    liveUrl: "https://firsttrust.netlify.app/", private: true },
   { title: "educreate-platform", category: "Design", icon: Layout, grad: "linear-gradient(135deg, oklch(0.65 0.20 290), oklch(0.60 0.22 320))",
     description: "Educreate est une plateforme web d’évaluation permettant aux étudiants de composer leurs examens localement dans un environnement numérique sécurisé, puis de soumettre leurs épreuves une fois terminées. Le système intègre une intelligence artificielle capable d’assister la correction et l’évaluation des réponses afin d’optimiser le processus de notation et le suivi académique.",
     tags: ["Figma", "UI/UX", "Prototype"],
@@ -117,7 +118,14 @@ export function Projects() {
                 </div>
                 <div className="p-6 space-y-4">
                   <div className="flex items-start justify-between gap-3">
-                    <h3 className="text-xl font-bold leading-tight">{p.title}</h3>
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <h3 className="text-xl font-bold leading-tight">{p.title}</h3>
+                      {p.private && (
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-destructive/10 text-destructive text-xs font-bold border border-destructive/20">
+                          <Lock size={10} /> Privé
+                        </span>
+                      )}
+                    </div>
                     <span className="shrink-0 px-2.5 py-1 rounded-full bg-secondary text-muted-foreground text-xs font-semibold">{p.category}</span>
                   </div>
                   <p className="text-sm text-muted-foreground leading-relaxed">{p.description}</p>
@@ -143,23 +151,25 @@ export function Projects() {
                       </a>
                     ) : (
                       <>
-                    <a
-                      href={p.liveUrl ?? "#"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-primary-foreground font-semibold text-sm shadow-[var(--shadow-glow)] hover:scale-[1.02] transition-transform"
-                      style={{ background: "var(--gradient-primary)" }}
-                    >
-                      <ExternalLink size={15} /> Live
-                    </a>
-                    <a
-                      href={p.codeUrl ?? "#"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-border font-semibold text-sm text-foreground hover:border-primary hover:text-primary transition-colors"
-                    >
-                      <Github size={15} /> Code
-                    </a>
+                        <a
+                          href={p.liveUrl ?? "#"}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-primary-foreground font-semibold text-sm shadow-[var(--shadow-glow)] hover:scale-[1.02] transition-transform"
+                          style={{ background: "var(--gradient-primary)", flex: p.private ? 1 : undefined }}
+                        >
+                          <ExternalLink size={15} /> Live
+                        </a>
+                        {!p.private && (
+                          <a
+                            href={p.codeUrl ?? "#"}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-border font-semibold text-sm text-foreground hover:border-primary hover:text-primary transition-colors"
+                          >
+                            <Github size={15} /> Code
+                          </a>
+                        )}
                       </>
                     )}
                   </div>
