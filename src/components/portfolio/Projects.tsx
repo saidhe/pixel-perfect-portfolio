@@ -151,23 +151,25 @@ export function Projects() {
                       </a>
                     ) : (
                       <>
-                    <a
-                      href={p.liveUrl ?? "#"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-primary-foreground font-semibold text-sm shadow-[var(--shadow-glow)] hover:scale-[1.02] transition-transform"
-                      style={{ background: "var(--gradient-primary)" }}
-                    >
-                      <ExternalLink size={15} /> Live
-                    </a>
-                    <a
-                      href={p.codeUrl ?? "#"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-border font-semibold text-sm text-foreground hover:border-primary hover:text-primary transition-colors"
-                    >
-                      <Github size={15} /> Code
-                    </a>
+                        <a
+                          href={p.liveUrl ?? "#"}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-primary-foreground font-semibold text-sm shadow-[var(--shadow-glow)] hover:scale-[1.02] transition-transform"
+                          style={{ background: "var(--gradient-primary)", flex: p.private ? 1 : undefined }}
+                        >
+                          <ExternalLink size={15} /> Live
+                        </a>
+                        {!p.private && (
+                          <a
+                            href={p.codeUrl ?? "#"}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-border font-semibold text-sm text-foreground hover:border-primary hover:text-primary transition-colors"
+                          >
+                            <Github size={15} /> Code
+                          </a>
+                        )}
                       </>
                     )}
                   </div>
