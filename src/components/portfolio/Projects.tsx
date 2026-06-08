@@ -14,6 +14,7 @@ type Project = {
   codeUrl?: string;
   designUrl?: string;
   status?: "in-progress";
+  private?: boolean;
 };
 
 // 👉 Remplace les "#" ci-dessous par tes vrais liens (Live = site déployé, Code = repo GitHub)
