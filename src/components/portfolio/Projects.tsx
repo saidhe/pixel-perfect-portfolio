@@ -118,7 +118,14 @@ export function Projects() {
                 </div>
                 <div className="p-6 space-y-4">
                   <div className="flex items-start justify-between gap-3">
-                    <h3 className="text-xl font-bold leading-tight">{p.title}</h3>
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <h3 className="text-xl font-bold leading-tight">{p.title}</h3>
+                      {p.private && (
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-destructive/10 text-destructive text-xs font-bold border border-destructive/20">
+                          <Lock size={10} /> Privé
+                        </span>
+                      )}
+                    </div>
                     <span className="shrink-0 px-2.5 py-1 rounded-full bg-secondary text-muted-foreground text-xs font-semibold">{p.category}</span>
                   </div>
                   <p className="text-sm text-muted-foreground leading-relaxed">{p.description}</p>
