@@ -27,7 +27,7 @@ const projects: Project[] = [
     description: "Plateforme de gestion de conférences permettant d’organiser des événements, gérer les inscriptions des participants et structurer les programmes. Elle optimise la coordination des événements grâce à une interface intuitive et centralisée.",
     tags: ["React.Js", "Supabase", "Stripe"],
     liveUrl: "https://ajd-eight.vercel.app/", private: true },
-  { title: "Agence-Voyage", category: "EdTech", icon: GraduationCap, logo: transcamerLogo.url, grad: "linear-gradient(135deg, #0a0a0a, #1a1a1a)",
+  { title: "Agence-Voyage", category: "EdTech", icon: GraduationCap, logo: transcamerLogo.url, grad: "linear-gradient(135deg, #ffffff, #f3f4f6)",
     description: "Plateforme web dédiée aux agences de transport au Cameroun, facilitant la réservation de billets, la gestion des trajets et la consultation des horaires. L’application améliore l’expérience utilisateur grâce à une interface moderne, rapide et adaptée au contexte local.",
     tags: ["React.Js", "Supabase", "Stripe"],
     status: "in-progress" },
