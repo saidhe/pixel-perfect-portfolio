@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Github, ExternalLink, Star, Wrench, Zap, Crown, Leaf, Laptop, Heart, GraduationCap, Users, Sprout, Coins, Clock, Figma, Palette, Layout, Hospital, Lock } from "lucide-react";
+import firstTrustLogo from "@/assets/first-trust-logo.png.asset.json";
 
 type Project = {
   title: string;
@@ -15,6 +16,7 @@ type Project = {
   designUrl?: string;
   status?: "in-progress";
   private?: boolean;
+  logo?: string;
 };
 
 // 👉 Remplace les "#" ci-dessous par tes vrais liens (Live = site déployé, Code = repo GitHub)
@@ -27,7 +29,7 @@ const projects: Project[] = [
     description: "Plateforme web dédiée aux agences de transport au Cameroun, facilitant la réservation de billets, la gestion des trajets et la consultation des horaires. L’application améliore l’expérience utilisateur grâce à une interface moderne, rapide et adaptée au contexte local.",
     tags: ["React.Js", "Supabase", "Stripe"],
     status: "in-progress" },
-  { title: "FIRST TRUST", category: "Social App", icon: Users, grad: "linear-gradient(135deg, oklch(0.65 0.22 30), oklch(0.70 0.20 50))",
+  { title: "FIRST TRUST", category: "Social App", icon: Users, logo: firstTrustLogo.url, grad: "linear-gradient(135deg, #ffffff, #f3f4f6)",
     description: "Application web de gestion et de fiabilisation des numéros de téléphone. Elle permet de vérifier le format des numéros, de nettoyer automatiquement les données et de stocker les numéros valides dans une base de données.",
     tags: ["Php", "My SQL"],
     liveUrl: "https://firsttrust.netlify.app/", private: true },
@@ -109,7 +111,11 @@ export function Projects() {
               >
                 <div className="relative aspect-[16/10] grid place-items-center" style={{ background: p.grad }}>
                   <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,white_1px,transparent_1px)] [background-size:18px_18px]" />
-                  <p.icon size={80} className="text-white drop-shadow-lg group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+                  {p.logo ? (
+                    <img src={p.logo} alt={`${p.title} logo`} className="relative max-w-[70%] max-h-[70%] object-contain group-hover:scale-110 transition-transform duration-300" />
+                  ) : (
+                    <p.icon size={80} className="text-white drop-shadow-lg group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+                  )}
                   {p.featured && (
                     <span className="absolute top-4 right-4 inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-black/30 backdrop-blur text-white text-xs font-bold">
                       <Star size={12} className="fill-yellow-300 text-yellow-300" /> Featured
