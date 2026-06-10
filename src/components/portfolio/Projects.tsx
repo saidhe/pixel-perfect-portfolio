@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Github, ExternalLink, Star, Wrench, Zap, Crown, Leaf, Laptop, Heart, GraduationCap, Users, Sprout, Coins, Clock, Figma, Palette, Layout, Hospital, Lock, Presentation, Plane, Building2 } from "lucide-react";
+import { Github, ExternalLink, Star, Wrench, Zap, Crown, Leaf, Laptop, Heart, GraduationCap, Users, Sprout, Coins, Clock, Figma, Palette, Layout, Hospital, Lock, Presentation, Bus, Building2 } from "lucide-react";
 
 type Project = {
   title: string;
@@ -23,7 +23,7 @@ const projects: Project[] = [
     description: "Plateforme de gestion de conférences permettant d’organiser des événements, gérer les inscriptions des participants et structurer les programmes. Elle optimise la coordination des événements grâce à une interface intuitive et centralisée.",
     tags: ["React.Js", "Supabase", "Stripe"],
     liveUrl: "https://ajd-eight.vercel.app/", private: true },
-  { title: "Agence-Voyage", category: "EdTech", icon: Plane, grad: "linear-gradient(135deg, oklch(0.60 0.20 200), oklch(0.55 0.18 220))",
+  { title: "Agence-Voyage", category: "EdTech", icon: Bus, grad: "linear-gradient(135deg, oklch(0.60 0.20 200), oklch(0.55 0.18 220))",
     description: "Plateforme web dédiée aux agences de transport au Cameroun, facilitant la réservation de billets, la gestion des trajets et la consultation des horaires. L’application améliore l’expérience utilisateur grâce à une interface moderne, rapide et adaptée au contexte local.",
     tags: ["React.Js", "Supabase", "Stripe"],
     status: "in-progress" },
