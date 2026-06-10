@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Github, ExternalLink, Star, Wrench, Zap, Crown, Leaf, Laptop, Heart, GraduationCap, Users, Sprout, Coins, Clock, Figma, Palette, Layout, Hospital, Lock } from "lucide-react";
-import firstTrustLogo from "@/assets/first-trust-logo.png.asset.json";
-import ajdLogo from "@/assets/ajd-logo.png.asset.json";
-import transcamerLogo from "@/assets/transcamer-logo.jpg.asset.json";
+import { Github, ExternalLink, Star, Wrench, Zap, Crown, Leaf, Laptop, Heart, GraduationCap, Users, Sprout, Coins, Clock, Figma, Palette, Layout, Hospital, Lock, Presentation, Plane, Building2 } from "lucide-react";
 
 type Project = {
   title: string;
@@ -18,20 +15,19 @@ type Project = {
   designUrl?: string;
   status?: "in-progress";
   private?: boolean;
-  logo?: string;
 };
 
 // 👉 Remplace les "#" ci-dessous par tes vrais liens (Live = site déployé, Code = repo GitHub)
 const projects: Project[] = [
-  { title: "AJD-Conference", category: "AI Platform", featured: true, icon: Zap, logo: ajdLogo.url, grad: "linear-gradient(135deg, #ffffff, #f3f4f6)",
+  { title: "AJD-Conference", category: "AI Platform", featured: true, icon: Presentation, grad: "linear-gradient(135deg, oklch(0.55 0.22 280), oklch(0.50 0.20 300))",
     description: "Plateforme de gestion de conférences permettant d’organiser des événements, gérer les inscriptions des participants et structurer les programmes. Elle optimise la coordination des événements grâce à une interface intuitive et centralisée.",
     tags: ["React.Js", "Supabase", "Stripe"],
     liveUrl: "https://ajd-eight.vercel.app/", private: true },
-  { title: "Agence-Voyage", category: "EdTech", icon: GraduationCap, logo: transcamerLogo.url, grad: "linear-gradient(135deg, #ffffff, #f3f4f6)",
+  { title: "Agence-Voyage", category: "EdTech", icon: Plane, grad: "linear-gradient(135deg, oklch(0.60 0.20 200), oklch(0.55 0.18 220))",
     description: "Plateforme web dédiée aux agences de transport au Cameroun, facilitant la réservation de billets, la gestion des trajets et la consultation des horaires. L’application améliore l’expérience utilisateur grâce à une interface moderne, rapide et adaptée au contexte local.",
     tags: ["React.Js", "Supabase", "Stripe"],
     status: "in-progress" },
-  { title: "FIRST TRUST", category: "Social App", icon: Users, logo: firstTrustLogo.url, grad: "linear-gradient(135deg, #ffffff, #f3f4f6)",
+  { title: "FIRST TRUST", category: "Social App", icon: Building2, grad: "linear-gradient(135deg, oklch(0.45 0.15 250), oklch(0.40 0.13 270))",
     description: "Application web de gestion et de fiabilisation des numéros de téléphone. Elle permet de vérifier le format des numéros, de nettoyer automatiquement les données et de stocker les numéros valides dans une base de données.",
     tags: ["Php", "My SQL"],
     liveUrl: "https://firsttrust.netlify.app/", private: true },
@@ -113,11 +109,7 @@ export function Projects() {
               >
                 <div className="relative aspect-[16/10] grid place-items-center" style={{ background: p.grad }}>
                   <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,white_1px,transparent_1px)] [background-size:18px_18px]" />
-                  {p.logo ? (
-                    <img src={p.logo} alt={`${p.title} logo`} className="relative max-w-[70%] max-h-[70%] object-contain group-hover:scale-110 transition-transform duration-300" />
-                  ) : (
-                    <p.icon size={80} className="text-white drop-shadow-lg group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
-                  )}
+                  <p.icon size={80} className="text-white drop-shadow-lg group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                   {p.featured && (
                     <span className="absolute top-4 right-4 inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-black/30 backdrop-blur text-white text-xs font-bold">
                       <Star size={12} className="fill-yellow-300 text-yellow-300" /> Featured
